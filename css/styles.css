@@ -571,6 +571,7 @@ h2 {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
+  max-width: 100%;
 }
 
 .contact-form button {
