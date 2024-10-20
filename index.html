@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/flickity.min.css" media="screen">
+  <link rel="icon" type="image/x-icon" href="icons/favicon-08.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <title>Adam Bušina | Fotograf | Brno</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+        <a href="#"><img src="icons/ABminiatura2.png" alt="Logo" class="logo"></a>
+        <span class="company-name">Adam Bušina | Fotograf</span>
+    </div>
+    <div class="navbar-right">
+        <ul class="navbar-links">
+          <li><a href="#">Domů</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="omne.html">O mně</a></li>
+          <li><a href="sluzby.html">Služby</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <a href="#napismi" class="navbar-last-button">Napiš mi</a>
+        </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+      <ul>
+          <li><a href="#">Domů</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="omne.html">O mně</a></li>
+          <li><a href="sluzby.html">Služby</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+  </div>
+
+  <section class="hero">
+    <div class="cta-grid">
+      <div class="cta-left">
+        <h1 class="cta-heading">Zaznamenám<br>& doručím</h1>
+        <p class="cta-additional-text">abyste se o nic nemuseli starat</p>
+        <button class="cta-button" id="myBtn">Objednejte si mě</button>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <form class="contact-form-modal" action="#" method="POST">
+              <label for="name">Jméno:</label>
+              <input type="text" id="name" name="name" required>
+            
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            
+              <label for="message">Zpráva:</label>
+              <textarea id="message" name="message" rows="10" required></textarea>
+            
+              <button type="submit">Odeslat</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="cta-right">
+        
+        <img src="imgs/podpis.png" alt="" class="podpis">
+      </div>
+    </div>   
+  </section>
+
+  <div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true }'>
+		<div class="carousel-cell" style="background-image: url(imgs/image1.jpg)"></div>
+		<div class="carousel-cell" style="background-image: url(imgs/image2.jpg)"></div>
+		<div class="carousel-cell" style="background-image: url(imgs/image3.jpg)"></div>
+		<div class="carousel-cell" style="background-image: url(imgs/image4.jpg)"></div>
+		<div class="carousel-cell" style="background-image: url(imgs/image5.jpg)"></div>
+    <div class="carousel-cell" style="background-image: url(imgs/image6.jpg)"></div>
+    <div class="carousel-cell" style="background-image: url(imgs/image7.jpg)"></div>
+    <div class="carousel-cell" style="background-image: url(imgs/image8.jpg)"></div>
+  </div>
+
+  <a href="galerie.html">
+    <button class="gallery-button">Celá galerie zde</button>
+  </a>
+  
+
+  <section class="info-section">
+    <h2 class="info-heading">Co ti můžu nabídnout?</h2>
+    <div class="info-grid">
+        <div class="info-row1">
+            <img src="icons/icon1.png" alt="Dostupnost" class="info-icon1">
+            <div class="info-text1">
+                <h3 class="info-subheading">Dostupnost</h3>
+                <p>Fotografie odevzdávám online pro jednoduchost stažení. Ať už potřebujete snímky optimalizované pro web, sociální sítě nebo vysoce kvalitní verze pro tisk, vždy dostanete fotografie přizpůsobené účelu, pro který je potřebujete.</p>
+            </div>
+        </div>
+        <div class="info-row2">
+            <div class="info-text2">
+                <h3 class="info-subheading">Profesionalita a spolehlivost</h3>
+                <p>Jako profesionál kladu důraz na spolehlivost a precizní přístup. Dodržuji termíny, komunikuji otevřeně a dbám na to, aby každý krok naší spolupráce probíhal hladce. Vždy se přizpůsobím stylu dané akce, abych byl/nebyl vidět tak, jak je potřeba. Vaše spokojenost je pro mě prioritou.</p>
+            </div>
+            <img src="icons/icon2.png" alt="Profesionalita a spolehlivost" class="info-icon2">
+        </div>
+        <div class="info-row3">
+            <img src="icons/icon3.png" alt="Zachycení emocí a atmosféry" class="info-icon3">
+            <div class="info-text3">
+                <h3 class="info-subheading">Zachycení emocí a atmosféry</h3>
+                <p>Každá fotografie by měla přenést zpět do okamžiku, kdy byla pořízena, a oživit to, co se tehdy dělo. Soustředím se na autentické chvíle, které vyprávějí příběh a nechávají vyniknout pravou podstatu okamžiku.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="about-me">
+    <div class="about-me-image">
+      <img src="imgs/IMG2-5241-4.jpg" alt="About Me" class="about-me-background" />
+    </div>
+    <div class="about-me-content">
+      <div class="about-me-square1">
+        <h4>5+</h4>
+        <p>let praxe</p>
+      </div>
+      <div class="about-me-square2">
+        <img src="icons/camera.png" alt="">
+        <p>profesionální<br>vybavení</p>
+      </div>
+      <div class="about-me-center">
+        <h3>Tohle jsem já</h3>
+        <a href="omne.html">
+          <button>Přečti si můj příběh</button>
+        </a>
+      </div>
+      <div class="about-me-square3">
+        <h4>1-3</h4>
+        <p>dny průměrná<br>doba doručení</p>
+      </div>
+      <div class="about-me-square4">
+        <img src="icons/drone.png" alt="">
+        <p>dronové<br>záběry</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  <section class="info2-section" id="sluzby">
+    <h2 class="info2-heading">Co ti můžu vyfotit?</h2>
+    <div class="info2-grid">
+        <div class="info2-row1">
+            <img src="imgs/aimage1.jpg" alt="Koncerty a vystoupení" class="info2-icon1">
+            <div class="info2-text1">
+                <h3 class="info2-subheading">Koncerty a vystoupení</h3>
+                <p>Hudba naživo je neopakovatelný zážitek a právě tyto okamžiky jsou mým cílem zachytit. Fotím tak, aby na každé fotce byla cítit energie z koncertu – od intenzivních světelných show až po autentické emoce na pódiu i v publiku. S mými fotkami si z koncertu odneseš nejen vzpomínky, ale i obraz, který bude mluvit sám za sebe.</p>
+            </div>
+        </div>
+        <div class="info2-row2">
+            <div class="info2-text2">
+                <h3 class="info2-subheading">Akce na všechny způsoby</h3>
+                <p>Plánuješ svatbu, oslavu, firemní večírek nebo jinou speciální událost? Jsem tady, abych zachytil každý důležitý okamžik. Od příprav až po poslední detaily – moje fotografie ti umožní znovu prožít celý průběh akce. S mým přístupem se můžeš spolehnout na to, že každý moment bude zaznamenán přirozeně a autenticky, přesně tak, jak se odehrál.</p>
+            </div>
+            <img src="imgs/aimage2.jpg" alt="Akce na všechny způsoby" class="info2-icon2">
+        </div>
+        <div class="info2-row3">
+            <img src="imgs/aimage3.jpg" alt="Brand fotky" class="info2-icon3">
+            <div class="info2-text3">
+                <h3 class="info2-subheading">Brand fotky</h3>
+                <p>Potřebuješ profesionální snímky, které budou odrážet identitu tvé značky? Specializuji se na vytváření vizuálního obsahu, který dokonale reprezentuje tvůj brand. Ať už jde o firemní portréty, produktové fotografie nebo lifestyle snímky, pomůžu ti vytvořit silný vizuální dojem, který zaujme tvé zákazníky a posílí tvůj marketing.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="form" id="napismi">
+    <h2 class="form-heading">Kontaktuj mě</h2>
+    <form class="contact-form" action="#" method="POST">
+      <label for="name">Jméno:</label>
+      <input type="text" id="name" name="name" required>
+    
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    
+      <label for="message">Zpráva:</label>
+      <textarea id="message" name="message" rows="10" required></textarea>
+    
+      <button type="submit">Odeslat</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <img src="icons/ABminiatura2.png" alt="" class="footer-logo"><br>
+    </div>
+    <div class="footer-box">
+      <img src="icons/envelope.png" alt="email">
+      <a href="mailto:info@adambusina.cz">info@adambusina.cz</a>
+      <img src="icons/social-media.png" alt="instagram">
+      <a href="https://www.instagram.com/adamsroams/">@adamsroams</a>
+    </div>
+    <div class="footer-box2">
+      <p><a href="index.html">Domů</a></p>
+      <p><a href="galerie.html">Galerie</a></p>
+      <p><a href="omne.html">O mně</a></p>
+      <p><a href="sluzby.html">Služby</a></p>
+      <p><a href="kontakt.html">Kontakt</a></p>
+    </div>
+  </footer>
+  <div class="copyright-end">
+    <span class="company-name">Adam Bušina | Fotograf © Copyright 2024</span>
+  </div>
+
+
+
+
+  <script>
+      function toggleMenu() {
+          const menu = document.getElementById("mobileMenu");
+          menu.classList.toggle("show");
+      }
+  </script>
+  <script src="js/flickity.pkgd.min.js"></script>
+  <script src="js/script.js"></script>
+
+
+
+</body>
+</html>

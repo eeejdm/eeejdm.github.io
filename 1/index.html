@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleek CSS Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 90vw;
+            max-width: 1200px;
+        }
+
+        .gallery img {
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        /* 4-column layout for large viewports */
+        .portrait {
+            width: calc(25% - 10px); /* Takes 25% width of the gallery for 4-column layout */
+        }
+
+        .landscape {
+            width: calc(50% - 10px); /* Landscape images take 50% of the row */
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* 2-column layout for medium viewports */
+        @media (max-width: 1024px) {
+            .portrait {
+                width: calc(50% - 10px); /* Portrait images take 50% for 2-column layout */
+            }
+
+            .landscape {
+                width: 100%; /* Landscape images take full width in 2-column layout */
+            }
+        }
+
+        /* 1-column layout for small viewports */
+        @media (max-width: 600px) {
+            .portrait, .landscape {
+                width: 100%; /* Both portrait and landscape images take full width */
+            }
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05); /* Hover effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="event-gallery">
+        <img class="portrait" src="https://images.unsplash.com/photo-1721332149346-00e39ce5c24f?q=80&w=3436&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1" onclick="openLightbox(this)">
+        <img class="landscape" src="https://plus.unsplash.com/premium_photo-1729017497963-ec4ec3458794?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2" onclick="openLightbox(this)">
+        <img class="landscape" src="https://images.unsplash.com/photo-1728878039239-6b2f85e3c361?q=80&w=3431&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3" onclick="openLightbox(this)">
+        <img class="portrait" src="https://images.unsplash.com/photo-1728845614302-55f07a48e26e?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 4" onclick="openLightbox(this)">
+        <img class="portrait" src="https://plus.unsplash.com/premium_photo-1729017566977-c1670d157362?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" onclick="openLightbox(this)">
+        <img class="landscape" src="https://plus.unsplash.com/premium_photo-1729097011605-272826b292be?q=80&w=3422&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 6" onclick="openLightbox(this)">
+        <img class="landscape" src="https://plus.unsplash.com/premium_photo-1729005326851-89fab5720eba?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 7" onclick="openLightbox(this)">
+        <img class="portrait" src="https://images.unsplash.com/photo-1729088495700-66fc4d5279ea?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 8" onclick="openLightbox(this)">
+        <img class="landscape" src="https://plus.unsplash.com/premium_photo-1729017497963-ec4ec3458794?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 9" onclick="openLightbox(this)">
+    </div>
+
+    <!-- Lightbox Container -->
+    <div class="event-lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightboxImage" src="" alt="">
+    </div>
+
+    <script>
+        function openLightbox(image) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = image.src; // Set the lightbox image to the clicked image
+            lightbox.style.display = 'flex'; // Show the lightbox
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none'; // Hide the lightbox
+        }
+    </script>
+</body>
+</html>

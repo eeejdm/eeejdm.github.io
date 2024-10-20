@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/flickity.min.css" media="screen">
+  <link rel="icon" type="image/x-icon" href="icons/favicon-08.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <title>O mně</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+        <a href="index.html"><img src="icons/ABminiatura2.png" alt="Logo" class="logo"></a>
+        <span class="company-name">Adam Bušina | Fotograf</span>
+    </div>
+    <div class="navbar-right">
+        <ul class="navbar-links">
+          <li><a href="index.html">Domů</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="omne.html">O mně</a></li>
+          <li><a href="sluzby.html">Služby</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <a href="index.html#napismi" class="navbar-last-button">Napiš mi</a>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+      <ul>
+          <li><a href="index.html">Domů</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="omne.html">O mně</a></li>
+          <li><a href="sluzby.html">Služby</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+  </div>
+
+  <div class="omne-container">
+    <h1>O mně</h1>
+    <div class="omne-main">
+      <img src="imgs/IMG2-5241-4.jpg" alt="">
+      <div class="omne-text1">
+        <h2>Úplné začátky</h2>
+        <p>Už před rokem 2019 jsem měl zájem vytvářet a zachycovat momenty. Prvním vlastním nástrojem byl tedy jednoduše telefon, s kterým jsem fotil, co mi přišlo pod ruku, a postupně jsem si rozvíjel cit pro detail a kompozici.V roce 2019 jsem poprvé dostal do ruky půjčenou zrcadlovku. Hned první den focení jsem byl naplněn úžasem a i přes nepopsatelně špatné fotky jsem nepolevoval. Naučil jsem se základy a koupil vlastní foťák.</p>
+      </div>
+      <div class="omne-text2">
+        <h2>První zakázky</h2>
+        <p>Neuplynulo moc času a začal jsem hledat, jak si přivydělat tím, co mě baví. Našel jsem práci jako kameraman pro YouTube tvůrce a u toho jsem fotil sezóně profesionální e-sport tým. Touto dobou jsem sebou nosil foťák kamkoliv a zamiloval jsem si i focení přírody a takzvané "street" fotky.</p>
+      </div>
+      <div class="omne-text3">
+        <h2>Pokračování</h2>
+        <p>Od té doby se posouvám dál a získávám zkušenosti z dalších odvětví. Rád poznávám nové klienty a pracuji pro co nejlepší výsledek. Nejaktivněji se momentálně věnuji fotografování akcí. Moje nejoblíbenější jsou hudební akce, ale na druhou stranu se rád vyskytnu i na akcích mně osobnostně dál.</p>
+      </div>
+    </div>
+    <a href="galerie.html">
+      <button class="omne-button">Moje aktuální tvorba</button>
+    </a>
+  </div>
+
+
+
+
+
+  <footer class="footer">
+    <div class="footer-main">
+      <img src="icons/ABminiatura2.png" alt="" class="footer-logo"><br>
+    </div>
+    <div class="footer-box">
+      <img src="icons/envelope.png" alt="email">
+      <a href="mailto:info@adambusina.cz">info@adambusina.cz</a>
+      <img src="icons/social-media.png" alt="instagram">
+      <a href="https://www.instagram.com/adamsroams/">@adamsroams</a>
+    </div>
+    <div class="footer-box2">
+      <p><a href="index.html">Domů</a></p>
+      <p><a href="galerie.html">Galerie</a></p>
+      <p><a href="omne.html">O mně</a></p>
+      <p><a href="sluzby.html">Služby</a></p>
+      <p><a href="kontakt.html">Kontakt</a></p>
+    </div>
+  </footer>
+  <div class="copyright-end">
+    <span class="company-name">Adam Bušina | Fotograf © Copyright 2024</span>
+  </div>
+
+
+
+
+  <script>
+      function toggleMenu() {
+          const menu = document.getElementById("mobileMenu");
+          menu.classList.toggle("show");
+      }
+  </script>
+  <script src="js/script.js"></script>
+
+
+
+
+</body>
+</html>

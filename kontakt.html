@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/flickity.min.css" media="screen">
+  <link rel="icon" type="image/x-icon" href="icons/favicon-08.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <title>Kontakt</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+        <a href="index.html"><img src="icons/ABminiatura2.png" alt="Logo" class="logo"></a>
+        <span class="company-name">Adam Bušina | Fotograf</span>
+    </div>
+    <div class="navbar-right">
+        <ul class="navbar-links">
+          <li><a href="index.html">Domů</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="omne.html">O mně</a></li>
+          <li><a href="sluzby.html">Služby</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <a href="index.html#napismi" class="navbar-last-button">Napiš mi</a>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+      <ul>
+          <li><a href="index.html">Domů</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="omne.html">O mně</a></li>
+          <li><a href="sluzby.html">Služby</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+  </div>
+
+
+  <div class="kontakt-container">
+    <h1>Kontakt</h1>
+    <div class="kontakt-box">
+      <div style="max-width:100%;overflow:hidden;color:red;width:420px;height:420px;"><div id="google-maps-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Brno,+Česko&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><style>#google-maps-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}</style></div>
+      <div class="udaje">
+        <h2>Fakturační údaje</h2>
+        <p>Adam Bušina<br>Vychodilova 3157/12d 61600, Brno</p>
+        <p>IČ: 21941611<br>Fyzická osoba zapsaná v Živnostenském rejstříku v Brně od 14.8.2024</p>
+        <div class="socials">
+          <div class="mail-box">
+            <img src="icons/envelope.png" alt="" class="socials-icons">
+            <a href="mailto:info@adambusina.cz">info@adambusina.cz</a>
+          </div>
+          <div class="ig-box">
+            <img src="icons/social-media.png" alt="" class="socials-icons">
+            <a href="https:\\instagram.com\adamsroams\">@adamsroams</a>
+          </div>
+          <div class="tel-box">
+            <img src="icons/phone-call.png"" class="socials-icons">
+            <a href="tel:+420605856680">+420 605 856 680</a>
+          </div>
+          <div class="location-box">
+            <img src="icons/marker.png" alt="" class="socials-icons">
+            <p>Brno, Morava a Slezsko</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <footer class="footer">
+    <div class="footer-main">
+      <img src="icons/ABminiatura2.png" alt="" class="footer-logo"><br>
+    </div>
+    <div class="footer-box">
+      <img src="icons/envelope.png" alt="email">
+      <a href="mailto:info@adambusina.cz">info@adambusina.cz</a>
+      <img src="icons/social-media.png" alt="instagram">
+      <a href="https://www.instagram.com/adamsroams/">@adamsroams</a>
+    </div>
+    <div class="footer-box2">
+      <p><a href="index.html">Domů</a></p>
+      <p><a href="galerie.html">Galerie</a></p>
+      <p><a href="omne.html">O mně</a></p>
+      <p><a href="sluzby.html">Služby</a></p>
+      <p><a href="kontakt.html">Kontakt</a></p>
+    </div>
+  </footer>
+  <div class="copyright-end">
+    <span class="company-name">Adam Bušina | Fotograf © Copyright 2024</span>
+  </div>
+
+
+
+
+  <script>
+      function toggleMenu() {
+          const menu = document.getElementById("mobileMenu");
+          menu.classList.toggle("show");
+      }
+  </script>
+  <script src="js/script.js"></script>
+
+
+
+
+</body>
+</html>

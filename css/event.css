@@ -1,0 +1,82 @@
+.event-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 10vw;
+  margin-bottom: 3rem;
+}
+
+.event-heading {
+  margin: 20px 10vw;
+  font-size: 55px;
+}
+
+.event-gallery img {
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+/* 4-column layout for large viewports */
+.portrait {
+  width: calc(25% - 10px); /* Takes 25% width of the gallery for 4-column layout */
+}
+
+.landscape {
+  width: calc(50% - 10px); /* Landscape images take 50% of the row */
+}
+
+/* Lightbox styles */
+.event-lightbox {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.event-lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* 2-column layout for medium viewports */
+@media (max-width: 1024px) {
+  .portrait {
+      width: calc(50% - 10px); /* Portrait images take 50% for 2-column layout */
+  }
+
+  .landscape {
+      width: 100%; /* Landscape images take full width in 2-column layout */
+  }
+}
+
+/* 1-column layout for small viewports */
+@media (max-width: 600px) {
+  .portrait, .landscape {
+      width: 100%; /* Both portrait and landscape images take full width */
+  }
+}
+
+.event-gallery img:hover {
+  transform: scale(1.05); /* Hover effect */
+}
