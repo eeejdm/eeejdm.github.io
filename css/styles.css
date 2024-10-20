@@ -231,7 +231,6 @@ h2 {
 .contact-form-modal {
   display: flex;
   flex-direction: column;
-  width: 100%;
   max-width: 400px; /* Adjust as needed */
   margin: 0 auto; /* Center the form */
   padding: 1rem;
