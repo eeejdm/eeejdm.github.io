@@ -549,6 +549,10 @@ h2 {
   font-weight: 500;
 }
 
+.form {
+  padding: 0 5vw;	
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -566,12 +570,11 @@ h2 {
 
 .contact-form input,
 .contact-form textarea {
-  padding: 0.5rem;
+  padding: 5px;
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
-  max-width: 100%;
 }
 
 .contact-form button {
