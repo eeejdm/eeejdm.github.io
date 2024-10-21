@@ -59,6 +59,31 @@
   cursor: pointer;
 }
 
+.lightbox-prev, .lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 40px;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+.lightbox-prev:hover, .lightbox-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 /* 2-column layout for medium viewports */
 @media (max-width: 1024px) {
   .portrait {
@@ -78,5 +103,5 @@
 }
 
 .event-gallery img:hover {
-  transform: scale(1.05); /* Hover effect */
+  transform: scale(1.02); /* Hover effect */
 }

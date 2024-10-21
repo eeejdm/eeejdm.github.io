@@ -4,6 +4,7 @@
   --PRIMARY:#52616B;
   --DARK:#1E2022;
   --HIGHLIGHT:#1A9FC4;
+  box-sizing: border-box;
 }
 
 * {
@@ -134,6 +135,7 @@ h2 {
 }
 
 .mobile-menu ul li a {
+  display: block;
   color: var(--WHITE);
   text-decoration: none;
 }
@@ -244,7 +246,7 @@ h2 {
 
 .contact-form-modal input,
 .contact-form-modal textarea {
-  padding: 5px;
+  padding: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid var(--WHITE);
   border-radius: 4px;
@@ -330,11 +332,13 @@ h2 {
 
 .info-section {
   padding: 20px 20vw;
+  padding-bottom: 3rem;
 }
 
 .info-heading {
   font-size: 36px;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .info-subheading {
@@ -377,9 +381,10 @@ h2 {
   align-items: center;
 }
 
-.info-icon2 {
-  justify-self: right;
+.info-icon1, .info-icon2, .info-icon3 {
+  justify-self: center;
 }
+
 
 .info-text1, .info-text2, .info-text3 p {
   font-weight: 400;
@@ -489,6 +494,7 @@ h2 {
 .info2-heading {
   font-size: 36px;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .info2-subheading {
@@ -535,10 +541,11 @@ h2 {
   width: 100%;
   border-radius: 50%;
   max-width: 300px;
+  justify-self: center;
 }
 
 .info2-icon2 {
-  justify-self: right;
+  justify-self: center;
   width: 100%;
   border-radius: 50%;
   max-width: 300px;
@@ -549,7 +556,7 @@ h2 {
 }
 
 .form {
-  padding: 0 5vw;	
+  padding: 0 5vw;
 }
 
 .contact-form {
@@ -573,6 +580,7 @@ h2 {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
+  max-width: 100%;
 }
 
 .contact-form button {
@@ -663,6 +671,34 @@ h2 {
   padding: 3px 0;
 }
 
+.back-to-top {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--PRIMARY);
+	border-radius: 2rem;
+	padding: 0.5rem;
+	text-decoration: none;
+	transition: 0.2s ease-out;
+  z-index: 4;
+}
+
+.back-to-top span {
+	color: #fff;
+	font-size: 3rem;
+	transition: 0.2s ease-out;
+}
+
+.back-to-top:hover {
+	background-color: var(--DARK);
+}
+.back-to-top:hover span {
+	transform: translateY(-4px);
+}
+
 /* galerie.html */
 
 .event-container {
@@ -738,13 +774,13 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(139, 139, 139, 0.2); /* Light overlay */
+  background-color: rgba(255, 255, 255, 0); /* Light overlay */
   transition: background-color 0.3s ease;
   border-radius: 18px;
 }
 
 .event-image-wrapper:hover .event-overlay {
-  background-color: rgba(119, 119, 119, 0.5); /* Darkens overlay on hover */
+  background-color: rgba(206, 206, 206, 0.356); /* Darkens overlay on hover */
 }
 
 /* omne.html */

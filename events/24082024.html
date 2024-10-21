@@ -134,8 +134,10 @@
     
           <!-- Lightbox Container -->
           <div class="event-lightbox" id="lightbox">
-              <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-              <img id="lightboxImage" src="" alt="">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <button class="lightbox-prev" onclick="changeImage(-1)">&#10094;</button>
+            <img id="lightboxImage" src="" alt="">
+            <button class="lightbox-next" onclick="changeImage(1)">&#10095;</button>
           </div>
           <footer class="footer">
             <div class="footer-main">
@@ -167,17 +169,49 @@
           <script src="../js/flickity.pkgd.min.js"></script>
           <script src="../js/script.js"></script>
           <script>
+            let currentImageIndex = 0; // Track the current image
+            let images = []; // Array to store the images for navigation
+    
             function openLightbox(image) {
                 const lightbox = document.getElementById('lightbox');
                 const lightboxImage = document.getElementById('lightboxImage');
-                lightboxImage.src = image.src; // Set the lightbox image to the clicked image
+    
+                // Clear any previous images in the images array
+                images = Array.from(document.querySelectorAll('.event-gallery img')); // Select all images in the gallery
+    
+                // Find the index of the clicked image
+                currentImageIndex = images.indexOf(image);
+    
+                // Set the lightbox image to the clicked image
+                lightboxImage.src = image.src; 
                 lightbox.style.display = 'flex'; // Show the lightbox
+    
+                  // Add click event to lightbox to close it when clicking outside the image
+                lightbox.addEventListener('click', function(event) {
+                  if (event.target === lightbox) { // Check if the clicked area is the lightbox itself
+                    closeLightbox();
+                  }
+                });
             }
     
             function closeLightbox() {
                 const lightbox = document.getElementById('lightbox');
                 lightbox.style.display = 'none'; // Hide the lightbox
             }
+    
+            function changeImage(direction) {
+                currentImageIndex += direction;
+    
+                // Wrap around if at the beginning or end of the array
+                if (currentImageIndex < 0) {
+                    currentImageIndex = images.length - 1;
+                } else if (currentImageIndex >= images.length) {
+                    currentImageIndex = 0;
+                }
+    
+                document.getElementById('lightboxImage').src = images[currentImageIndex].src; // Update lightbox image
+            }
+    
           </script>
         </body>
         </html>
